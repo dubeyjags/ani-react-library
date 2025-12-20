@@ -1,14 +1,13 @@
 import { AppBar } from '@mui/material'
 
-export const AniNavbar = ({children, color, type='horizontal', ...props}) => {
-  console.log(props)
+export const AniNavbar = ({children, type='horizontal', ...props}) => {
   return (
-    <AppBar component={'section'} {...props} color={color} sx={{
+    <AppBar component={'section'} {...props} color={props.color} sx={{
       display:type === 'horizontal' ? 'flex' : 'block', 
       flexDirection: type === 'horizontal' ? 'row' : 'column', 
       alignItems: 'center', 
-      width: props.maxWidth ? typeof props.maxWidth === "number" ? `${props.maxWidth}px` : props.maxWidth : "100%",
-      maxWidth: props.maxWidth ? `${props.maxWidth}px` : 'none',
+      width: props.maxwidth ? typeof props.maxwidth === "number" ? `${props.maxwidth}px` : props.maxwidth : "100%",
+      maxWidth: props.maxwidth ? `${props.maxwidth}px` : 'auto',
       height: props.height ? props.height : 'auto',
       overflowY: props.height ? 'auto' : 'visible',
       position: props.placement ? 'fixed' : 'static',

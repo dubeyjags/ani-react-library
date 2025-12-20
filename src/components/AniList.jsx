@@ -1,14 +1,14 @@
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import { Link } from 'react-router-dom'
 export const AniList = ({menu, type}) => {
 
     
   return (
     <List component="ul" sx={{ display: 'flex', flexDirection: type === 'horizontal' ? 'row' : 'column'}}>
           {menu.map((item, index) => (
-            <>
-            <ListItem component={'li'}  key={(item.text).trim()} disablePadding>
+            <ListItem component={'li'}  key={index} disablePadding>
                 {item.link ? (
-                  <ListItemButton component={'a'} href={item.link}>
+                  <ListItemButton  key={item.link}    component={Link} to={item.link}>
                     {item.Icon && <ListItemIcon>{item.Icon}</ListItemIcon>}
                     <ListItemText>{item.text}</ListItemText>
                   </ListItemButton>
@@ -28,7 +28,6 @@ export const AniList = ({menu, type}) => {
                 </List>
             )}
             </ListItem>
-            </>
           ))}
         </List>
   )

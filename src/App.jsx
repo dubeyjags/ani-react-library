@@ -10,20 +10,22 @@ import { AniNavbar } from "./components/AniNavbar.jsx";
 import { Forms } from "./components/Forms.jsx";
 import { DateTime } from "./components/DateTime.jsx";
 import { Tables } from "./components/Tables.jsx";
+import { Outlet } from "react-router-dom";
 
 
 function App() {
   const theme = useTheme();
 
   const leftMenu = [
-    { text: "Date Time Picker", link: "#datetime" },
-    { text: "Forms", link: "#forms" },
-    { text: "NavBars", link: "#navbars" },
-    { text: "Lists", link: "#lists" },
-    { text: "Avatars", link: "#avatars" },
-    { text: "Cards", link: "#cards" },
-    { text: "Main", link: "#mains" },
-    { text: "Buttons", link: "#buttons" },
+    { text: "NavBars", link: "/navbars" },
+    { text: "Lists", link: "/lists" },
+    { text: "Avatars", link: "/avatars" },
+    { text: "Cards", link: "cards" },
+    { text: "Main", link: "mains" },
+    { text: "Buttons", link: "buttons" },
+    { text: "Forms", link: "forms" },
+    { text: "Date Time Picker", link: "datetime" },
+    { text: "Tables", link: "table" },
   ];
 
   return (
@@ -35,7 +37,7 @@ function App() {
       className="min-h-screen"
     >
       <div className="flex flex-row">
-        <AniNavbar type="vertical" maxWidth={250} height="100vh" placement="left" shadow="xl">
+        <AniNavbar type="vertical" maxwidth={"250px"} height="100vh" placement="left" shadow="xl">
           <div className="p-5 font-bold">ANI UI Library</div>
           <AniList type="vertical" menu={leftMenu} />
         </AniNavbar>
@@ -44,23 +46,7 @@ function App() {
             <h1 className="text-4xl font-bold">Ani Library</h1>
             <p className="mt-2">A simple component library built with React, Tailwind CSS, and MUI.</p>
           </header>
-          <Tables />
-          <hr />
-          <DateTime />
-          <hr />
-          <Forms />
-          <hr />
-          <Navbars />
-          <hr />
-          <Lists />
-          <hr />
-          <Avatars />
-          <hr />
-          <Cards />
-          <hr />
-          <Mains />
-          <hr />
-          <Buttons />
+          <Outlet />
         </main>
       </div>
     </div>
