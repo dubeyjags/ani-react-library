@@ -4,19 +4,20 @@ import AniMain from "./AniMain";
 export const Mains = () => {
   const rightMenu = [
     {
-      name: "GitHub",
-      url: "https://github.com/AniLibrary",
+      text: "GitHub",
+      link: "https://github.com/AniLibrary",
       why: "Check out our code repository.",
     },
     {
-      name: "Documentation",
-      url: "https://anilibrary.com/docs",
+      text: "Documentation",
+      link: "https://anilibrary.com/docs",
       how: "Read the full documentation.",
     },
-    { name: "Contact", url: "https://anilibrary.com/contact" },
+    { text: "Contact", link: "https://anilibrary.com/contact" },
   ];
   return (
     <>
+    <h1 id="mains" className="text-3xl">Mains</h1>
       <AniMain
         className="p-3"
         heading="Main Heading"

@@ -5,7 +5,7 @@ import { Button, CardActions, Grid } from "@mui/material";
 const Cards = () => {
   return (
     <>
-    <h1 className='text-3xl'>Cards</h1>
+    <h1 className='text-3xl' id="cards">Cards</h1>
       <Grid container spacing={2} mb={4}>
         <Grid item size={4}>
           <AniCard>this is card description</AniCard>

@@ -3,13 +3,13 @@ import { AniNavbar } from './AniNavbar'
 import { AniList } from './AniList'
 export const Navbars = () => {
   const navbarMenu = [
-    {text: 'Home', link: '#', Icon: <Icon>home</Icon>},
-    {text: 'About', link: '#', Icon: <Icon>info</Icon>},
-    {text: 'Contact', link: '#', Icon: <Icon>phone</Icon>},
+    {text: 'Home', link: '#'},
+    {text: 'About', link: '#'},
+    {text: 'Contact', link: '#'},
   ]
   return (
     <>
-    <h1 className='text-3xl'>NavBars</h1>
+    <h1 className='text-3xl' id='navbars'>NavBars</h1>
     <h2 className='text-2xl'>Positions</h2>
     <AniNavbar position="static">
       Position Static | Fixed | Absolute
@@ -18,10 +18,16 @@ export const Navbars = () => {
     <AniNavbar   position="static" color={'secondary'}>
       Color Primary | Secondary | Default | Inherit | Transparent
     </AniNavbar>
-    <h2 className='text-2xl'>With Menu</h2>
+    <h2 className='text-2xl'>Horizontal Navbar</h2>
     <AniNavbar type="horizontal" className="flex justify-between">
       logo
       <AniList type="horizontal" menu={navbarMenu} />
+      Search
+    </AniNavbar>
+    <h2 className='text-2xl'>Vertical Navbar</h2>
+    <AniNavbar type="vertical">
+      logo
+      <AniList type="vertical" menu={navbarMenu} />
       Search
     </AniNavbar>
     </>

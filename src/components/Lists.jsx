@@ -20,7 +20,7 @@ export const Lists = () => {
   ]
   return (
     <>
-    <h1 className='text-3xl'>Lists</h1>
+    <h1 className='text-3xl' id='lists'>Lists</h1>
     <h2 className='text-2xl'>Horizontal</h2>
     <AniList type="horizontal" menu={list} />
     <h2 className='text-2xl'>Vertical</h2>

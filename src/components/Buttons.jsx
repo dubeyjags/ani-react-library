@@ -2,7 +2,7 @@ import AniButton from "./AniButton.jsx";
 export const Buttons = () => {
   return (
     <>
-    <h1 className="text-3xl">Buttons</h1>
+    <h1 className="text-3xl" id="buttons">Buttons</h1>
       
       <h2 className="mt-3">Main Buttons Types</h2>
       <div>
