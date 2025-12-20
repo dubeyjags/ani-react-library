@@ -1,8 +1,6 @@
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import { Link } from 'react-router-dom'
-export const AniList = ({menu, type}) => {
-
-    
+export default function AniList({menu, type}) {
   return (
     <List component="ul" sx={{ display: 'flex', flexDirection: type === 'horizontal' ? 'row' : 'column'}}>
           {menu.map((item, index) => (

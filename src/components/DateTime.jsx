@@ -1,6 +1,5 @@
 import { Grid } from '@mui/material'
-import {AniDateTime, AniTime, AniDate} from './AniDateTime'
-
+import {AniDateTime, AniTime, AniDate} from './ani-components'
 export const DateTime = () => {
   return (
     <div>

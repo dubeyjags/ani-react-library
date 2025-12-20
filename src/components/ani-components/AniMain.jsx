@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
-import { AniList } from './AniList'
 import { useTheme, useMediaQuery } from "@mui/material";
+import AniList from './AniList';
 
 const AniMain = ({children, ...props}) => {
   const theme = useTheme();

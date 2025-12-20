@@ -1,5 +1,5 @@
 import React from 'react'
-import { AniList } from './AniList'
+import { AniList } from './ani-components'
 import { Icon } from '@mui/material'
 
 export const Lists = () => {

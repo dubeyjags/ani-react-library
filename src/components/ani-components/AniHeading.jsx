@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const AniHeading = ({children, type}) => {
+export default function AniHeading ({children, type}) {
     const HeadingTag  = type === 'lead' ? 'p' : type || 'h1';
     const sizeClasses = {
         h1: 'text-4xl font-bold',

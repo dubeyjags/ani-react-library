@@ -35,7 +35,7 @@ export const AniFormInput = ({ label, optional, error, type = "text", options = 
 
       default:
         // text, password, email, number, etc.
-        return <OutlinedInput type={type} name={props.label} {...props}  />;
+        return <OutlinedInput type={type} name={props.label} {...props} value={props.value}  />;
     }
   };
 

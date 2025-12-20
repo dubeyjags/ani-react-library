@@ -1,4 +1,4 @@
-import { AniTable } from "./AniTable"
+import { AniTable } from "./ani-components/AniTable"
 
 export const Tables = () => {
   return (

@@ -1,5 +1,4 @@
-import React from "react";
-import { AniCard } from "./AniCard";
+import { AniCard } from "./ani-components";
 import { Button, CardActions, Grid } from "@mui/material";
 
 const Cards = () => {
@@ -7,16 +6,16 @@ const Cards = () => {
     <>
     <h1 className='text-3xl' id="cards">Cards</h1>
       <Grid container spacing={2} mb={4}>
-        <Grid item size={4}>
+        <Grid size={4}>
           <AniCard>this is card description</AniCard>
         </Grid>
-        <Grid item size={4}>
+        <Grid size={4}>
           <AniCard header={"Card header"}>this is card description</AniCard>
         </Grid>
-        <Grid item size={4}>
+        <Grid size={4}>
           <AniCard footer={"card footer"}>this is card description</AniCard>
         </Grid>
-        <Grid item size={4}>
+        <Grid size={4}>
           <AniCard
             image={
               "https://samplelib.com/lib/preview/jpeg/sample-clouds-400x300.jpg"
@@ -25,7 +24,7 @@ const Cards = () => {
             this is card description
           </AniCard>
         </Grid>
-        <Grid item size={4}>
+        <Grid size={4}>
           <AniCard
             header={"Card header"}
             image={
@@ -42,7 +41,7 @@ const Cards = () => {
             this is card description
           </AniCard>
         </Grid>
-        <Grid item size={4}>
+        <Grid size={4}>
           <AniCard
           >
             Card flipper

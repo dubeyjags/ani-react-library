@@ -1,6 +1,5 @@
 import React from 'react'
-import { AniAvatar } from './AniAvatar'
-
+import { AniAvatar } from './ani-components'
 export const Avatars = () => {
   return (
     <>

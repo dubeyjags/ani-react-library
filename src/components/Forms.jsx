@@ -1,5 +1,5 @@
 import React from "react";
-import { AniFormInput } from "./AniFormInput";
+import { AniFormInput } from "./ani-components/AniFormInput";
 
 export const Forms = () => {
   const [email, setEmail] = React.useState("");

@@ -1,21 +1,10 @@
 import { useTheme } from "@emotion/react";
-import { Buttons } from "./components/Buttons.jsx";
-import { Mains } from "./components/Mains.jsx";
-import Cards from "./components/Cards.jsx";
-import { Avatars } from "./components/Avatars.jsx";
-import { Navbars } from "./components/Navbars.jsx";
-import { Lists } from "./components/Lists.jsx";
-import { AniList } from "./components/AniList.jsx";
-import { AniNavbar } from "./components/AniNavbar.jsx";
-import { Forms } from "./components/Forms.jsx";
-import { DateTime } from "./components/DateTime.jsx";
-import { Tables } from "./components/Tables.jsx";
 import { Outlet } from "react-router-dom";
+import { AniList, AniNavbar } from "./components/ani-components";
 
 
 function App() {
   const theme = useTheme();
-
   const leftMenu = [
     { text: "NavBars", link: "/navbars" },
     { text: "Lists", link: "/lists" },

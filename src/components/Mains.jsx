@@ -1,5 +1,5 @@
-import { AniHeading } from "./AniHeading";
-import AniMain from "./AniMain";
+import { AniHeading } from "./ani-components";
+import {AniMain} from "./ani-components";
 
 export const Mains = () => {
   const rightMenu = [

@@ -1,6 +1,6 @@
 import { Icon } from '@mui/material'
-import { AniNavbar } from './AniNavbar'
-import { AniList } from './AniList'
+import { AniList, AniNavbar } from './ani-components'
+
 export const Navbars = () => {
   const navbarMenu = [
     {text: 'Home', link: '#'},

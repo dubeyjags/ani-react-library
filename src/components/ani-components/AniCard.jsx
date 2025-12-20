@@ -1,7 +1,5 @@
 import { Card, CardContent, CardHeader,CardActions, CardMedia } from '@mui/material'
-import React from 'react'
-
-export const AniCard = ({children, header,image, footer, actions}) => {
+export default function AniCard({children, header,image, footer, actions}) {
   return (
     <>
     <Card>

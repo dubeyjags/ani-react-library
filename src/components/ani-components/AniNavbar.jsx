@@ -1,6 +1,6 @@
 import { AppBar } from '@mui/material'
 
-export const AniNavbar = ({children, type='horizontal', ...props}) => {
+export default function AniNavbar ({children, type='horizontal', ...props}) {
   return (
     <AppBar component={'section'} {...props} color={props.color} sx={{
       display:type === 'horizontal' ? 'flex' : 'block', 

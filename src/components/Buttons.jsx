@@ -1,4 +1,5 @@
-import AniButton from "./AniButton.jsx";
+import { AniButton } from "./ani-components"
+
 export const Buttons = () => {
   return (
     <>
