@@ -2,7 +2,9 @@ import { AppBar } from '@mui/material'
 
 export default function AniNavbar ({children, type='horizontal', ...props}) {
   return (
-    <AppBar component={'section'} {...props} color={props.color} sx={{
+    <AppBar component={'section'} sx={{
+      bgcolor: props.bgcolor ? props.bgcolor : 'var(--primary)',
+      color: props.color,
       display:type === 'horizontal' ? 'flex' : 'block', 
       flexDirection: type === 'horizontal' ? 'row' : 'column', 
       alignItems: 'center', 
@@ -15,7 +17,7 @@ export default function AniNavbar ({children, type='horizontal', ...props}) {
       right: props.placement === 'left' ? 'auto' : '0',
       top: props.placement === 'top' ? '0' : 'auto',
       bottom: props.placement === 'bottom' ? '0' : 'auto',
-      }}>
+      }} {...props}>
       {children} 
     </AppBar>
   )

@@ -1,3 +1,63 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+:root {
+    --bg:#f0eeec;
+    --color:#333;
+    --topbarbg: #b4b4b4;
+    --primary:#1c244e;
+    --secondary:#f7901f;
+    --success:#22c55e;
+    --danger:#ef4444;
+    --warning:#eab308;
+    --info:#0ea5e9;
+    --light:#f3f4f6;
+    --fontFamily:"Nunito", "Arial", sans-serif;
+    --radius:6px;
+    --containerbg:#fff;
+    --containershadow:rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
 
-@custom-variant dark (&:where(.dark, .dark *));
+.cafepay{
+    --primary:#2e2e2e;
+    --color:#000;
+}
+.nrs{
+    --primary:#573b6e;
+    --color:#000;
+}
+.rollo{
+    --primary:#2d97ad;
+    --color:#000;
+}
+.dark{
+    --bg:#333;
+    --color:#f0eeec;
+    --primary:#111111;
+    --containerbg:#777;
+    --containershadow:rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.text-white{
+    color: #ffffff;
+}
+body {
+    background: var(--bg);
+    color: var(--color);
+    font-family: var(--fontFamily);
+}
+.main{
+    background: var(--containerbg);
+    border-radius: var(--radius);
+    box-shadow: var(--containershadow);
+    padding: 30px;
+
+}
+.justify-content-between{
+    display: flex;
+    justify-content: space-between;
+}

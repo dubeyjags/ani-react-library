@@ -2,7 +2,6 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import ThemeWrapper from "./ThemeWrapper.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbars } from "./components/Navbars.jsx";
 import { Lists } from "./components/Lists.jsx";
@@ -15,7 +14,6 @@ import { Tables } from "./components/Tables.jsx";
 import { DateTime } from "./components/DateTime.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ThemeWrapper>
       <Router>
       <Routes>
         <Route path="/" element={<App />}>
@@ -31,6 +29,5 @@ createRoot(document.getElementById("root")).render(
         </Route>        
       </Routes>
       </Router>
-    </ThemeWrapper>
   </StrictMode>
 );

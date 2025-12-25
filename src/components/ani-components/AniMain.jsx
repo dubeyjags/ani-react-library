@@ -6,7 +6,7 @@ const AniMain = ({children, ...props}) => {
   const theme = useTheme();
 const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   return (
-    <Grid component={'main'} container direction="row" spacing={2}   className={props.className}
+    <Grid component={'main'} container direction="row" spacing={2}  className={props.className + ' main'}
     >
 
       {props.leftMenu && (

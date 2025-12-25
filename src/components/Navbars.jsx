@@ -1,6 +1,5 @@
-import { Icon } from '@mui/material'
 import { AniList, AniNavbar } from './ani-components'
-
+import AbcIcon from '@mui/icons-material/Abc';
 export const Navbars = () => {
   const navbarMenu = [
     {text: 'Home', link: '#'},
@@ -18,13 +17,13 @@ export const Navbars = () => {
     <AniNavbar   position="static" color={'secondary'}>
       Color Primary | Secondary | Default | Inherit | Transparent
     </AniNavbar>
-    <h2 className='text-2xl'>Horizontal Navbar</h2>
-    <AniNavbar type="horizontal" className="flex justify-between">
+    <h2 className='text-2xl'>Horizontal Navbar <AbcIcon /> </h2>
+    <AniNavbar type="horizontal" className='justify-content-between' bgcolor={'#b4b4b4'} color={'#000'}>
       logo
       <AniList type="horizontal" menu={navbarMenu} />
       Search
     </AniNavbar>
-    <h2 className='text-2xl'>Vertical Navbar</h2>
+    <h2 className='text-2xl'>Vertical Navbar </h2>
     <AniNavbar type="vertical">
       logo
       <AniList type="vertical" menu={navbarMenu} />

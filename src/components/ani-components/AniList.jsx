@@ -1,18 +1,24 @@
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import { Link } from 'react-router-dom'
+import { useLocation } from "react-router-dom";
+
 export default function AniList({menu, type}) {
+const isActive = (route) => {
+  const location = useLocation();
+  return location.pathname.startsWith(route);
+};
   return (
     <List component="ul" sx={{ display: 'flex', flexDirection: type === 'horizontal' ? 'row' : 'column'}}>
           {menu.map((item, index) => (
             <ListItem component={'li'}  key={index} disablePadding>
                 {item.link ? (
-                  <ListItemButton  key={item.link}    component={Link} to={item.link}>
-                    {item.Icon && <ListItemIcon>{item.Icon}</ListItemIcon>}
+                  <ListItemButton  key={item.link} component={Link} to={item.link}  selected={isActive(item.link)}>
+                    {item.icon && <ListItemIcon sx={{padding:'0',margin:'0'}}>{item.icon}</ListItemIcon>}
                     <ListItemText>{item.text}</ListItemText>
                   </ListItemButton>
                 ) : (
                   <>
-                    {item.Icon && <ListItemIcon>{item.Icon}</ListItemIcon>}
+                    {item.icon && <ListItemIcon>{item.icon}</ListItemIcon>}
                     <ListItemText>{item.text}</ListItemText>
                   </>
                 )}
