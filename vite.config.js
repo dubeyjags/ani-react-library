@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: "src/index.ts",
+      entry: "src/main.jsx",
       name: "AniLibrary",
       formats: ["es", "umd"],
       fileName: "ani-library"

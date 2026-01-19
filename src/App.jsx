@@ -2,15 +2,8 @@ import { Outlet } from "react-router-dom";
 import { AniList, AniMain, AniNavbar } from "./components/ani-components";
 import { useEffect, useState } from "react";
 import { AniFormInput } from "./components/ani-components/AniFormInput";
-import ListIcon from '@mui/icons-material/List';
-import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import CreditCardIcon from '@mui/icons-material/CreditCard';
-import CircleIcon from '@mui/icons-material/Circle';
-import ListAltIcon from '@mui/icons-material/ListAlt';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import TableChartIcon from '@mui/icons-material/TableChart';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import MotionPhotosAutoIcon from '@mui/icons-material/MotionPhotosAuto';
+import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 function App() {
     const [dark, setDark] = useState(false);
 
@@ -26,15 +19,22 @@ function App() {
       }
     }, [dark]);
   const leftMenu = [
-    { icon: <MenuIcon className="text-white" />, text: "NavBars", link: "/navbars" },
-    { icon: <ListIcon className="text-white" />, text: "Lists", link: "/lists" },
-    { icon: <AccountCircleIcon className="text-white" />, text: "Avatars", link: "/avatars" },
-    { icon: <CreditCardIcon className="text-white" />, text: "Cards", link: "/cards" },
-    { icon: <CheckBoxOutlineBlankIcon className="text-white" />, text: "Main", link: "/mains" },
-    { icon: <CircleIcon  className="text-white" />, text: "Buttons", link: "/buttons" },
-    { icon: <ListAltIcon className="text-white" />, text: "Forms", link: "/forms" },
-    { icon: <CalendarMonthIcon className="text-white" />, text: "Date Time Picker", link: "/datetime" },
-    { icon: <TableChartIcon className="text-white" />, text: "Tables", link: "/table" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "NavBars", link: "/navbars" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Lists", link: "/lists" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Avatars", link: "/avatars" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Cards", link: "/cards" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Main", link: "/mains" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Buttons", link: "/buttons" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Forms", link: "/forms" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Date Time Picker", link: "/datetime" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Tables", link: "/table" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Alerts", link: "/alerts"},
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Tabs", link: "/tabs"},
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Switches", link: "/switches" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Tooltops", link: "/tooltips" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Popovers", link: "/popovers" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Modals/Dialogs", link: "/modals" },
+    { icon: <MotionPhotosAutoIcon className="text-white" />, text: "Steppers", link: "/steppers" },
   ];
   const themeOptions = [
     { label: "Dark", value: "dark" },
@@ -45,16 +45,15 @@ function App() {
   ];
 
   return (
-    <div
-    >
-      <div className="flex flex-row">
+
+      <>
         <AniNavbar type="vertical" maxwidth={"250px"} height="100vh" placement="left">
-          <div className="p-5 font-bold">ANI UI Library</div>
-          <AniFormInput size="small" type="select" onChange={(e) => updateTheme(e.target.value)} options={themeOptions} defaultValue={dark ? "dark" : "light"} className="text-white"></AniFormInput>
+          <div className="font-bold" ml={2}>ANI UI Library</div>
+          <AniFormInput size="small" type="select" onChange={(e) => updateTheme(e.target.value)} options={themeOptions} defaultValue={dark ? "dark" : "light"} sx={{color:"#000", background:"#fff" }}></AniFormInput>
           <AniList type="vertical" menu={leftMenu} />
         </AniNavbar>
-        <main className="p-5 space-y-6" style={{ marginLeft: "250px" }}>
-          <header className="p-5 border-b border-gray-300 dark:border-gray-700 mb-5">
+        <main className="p-5 space-y-6" style={{ marginLeft: "270px" }}>
+          <header>
             <h1 className="text-4xl font-bold">Ani Library </h1>
             <p className="mt-2">A simple component library built with React and MUI.</p>
             <button
@@ -67,8 +66,7 @@ function App() {
           <Outlet />
           </AniMain>
         </main>
-      </div>
-    </div>
+      </>
   );
 }
 

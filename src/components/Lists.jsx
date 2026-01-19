@@ -16,7 +16,7 @@ export const Lists = () => {
   const listwithLinks = [
     {text: 'Home', link: '#', Icon: <Icon>home</Icon>},
     {text: 'About', link: '#', Icon: <Icon>info</Icon>},
-    {text: 'Contact', link: '#', Icon: <Icon>phone</Icon>},
+    {text: 'Contact', link: '#', Icon: <Icon>phone</Icon>, disabled: "This is disabled" },
   ]
   return (
     <>

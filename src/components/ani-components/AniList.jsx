@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import { List, ListItem, ListItemButton, ListItemIcon, ListItemText, Tooltip } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { useLocation } from "react-router-dom";
 
@@ -11,8 +11,16 @@ const isActive = (route) => {
     <List component="ul" sx={{ display: 'flex', flexDirection: type === 'horizontal' ? 'row' : 'column'}}>
           {menu.map((item, index) => (
             <ListItem component={'li'}  key={index} disablePadding>
-                {item.link ? (
-                  <ListItemButton  key={item.link} component={Link} to={item.link}  selected={isActive(item.link)}>
+              {item.disabled ? (
+              <Tooltip title={item.disabled} placement="bottom">
+                <ListItemButton disabled={item.disabled} >
+                  {item.icon && <ListItemIcon sx={{padding:'0',margin:'0'}}>{item.icon}</ListItemIcon>  }
+                  <ListItemText>{item.text} </ListItemText>
+                </ListItemButton>
+              </Tooltip>
+              ) : (
+                item.link && item.link ? (
+                  <ListItemButton disabled={item.disabled}  key={item.link} component={Link} to={item.link}  selected={isActive(item.link)}>
                     {item.icon && <ListItemIcon sx={{padding:'0',margin:'0'}}>{item.icon}</ListItemIcon>}
                     <ListItemText>{item.text}</ListItemText>
                   </ListItemButton>
@@ -21,7 +29,9 @@ const isActive = (route) => {
                     {item.icon && <ListItemIcon>{item.icon}</ListItemIcon>}
                     <ListItemText>{item.text}</ListItemText>
                   </>
-                )}
+                )
+              
+              )}
             {item.submenu && (  
                 <List component="ul" sx={{ display: 'flex', flexGrow: 1, flexDirection: type === 'horizontal' ? 'row' : 'column'}}>
                     {item.submenu.map((subitem, subindex) => (
